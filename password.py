@@ -5,6 +5,9 @@ class Password:
     def __init__(self, userName, password):
         self.userName = userName
         self.password = password
+        
+    def savePassword(self):
+        Password.my_list.append(self)
 
 
 
