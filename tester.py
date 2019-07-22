@@ -16,3 +16,17 @@ class Testing (unittest.TestCase):
         self.assertEqual(self.new_user.Password, "123")
 
         ''' Testing the password class'''
+
+     def test_savePassword(self):
+        self.new_person.savePassword()
+        self.assertEqual(len(Password.my_list),1)
+
+    def test_deletePassword(self):
+        self.new_person.savePassword()
+        self.new_person.deletePassword()
+        self.assertEqual(len(Password.my_list),0)
+
+
+        '''
+        Testing the User class
+        '''
