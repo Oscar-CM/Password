@@ -24,3 +24,6 @@ class User:
     def __init__(self, name, Password):
         self.name = name
         self.Password = Password
+    
+    def saveUser(self):
+        User.user_list.append(self)
