@@ -27,10 +27,11 @@ class Testing (unittest.TestCase):
         self.assertEqual(len(Password.my_list),0)
 
 
-        '''
+       
+    def test_saveUser(self):
+         '''
         Testing the User class
         '''
-    def test_saveUser(self):
         self.new_user.saveUser()
         self.assertEqual(len(User.user_list),1)
 
