@@ -61,6 +61,39 @@ def main():
                 print(" ")
                 print(f'Welcome {name}.\n Please choose an option to continue.')
                 print(' ')
-          
+          while True:
+                    print("Use the following shoryt codes : \n AD--to add new password, \n DA-- to display all the details, \n AN - to add new account details, \n E - Exit")
+                    print("")
+                    print("Enter the short code")
+                    shortCode = input().lower()
+                    if shortCode == "ad":
+                        print("New Details")
+                        print("-"*10)
+
+                        print("Name")
+                        name = input()
+
+                        print("Password")
+                        passw = input()
+
+                        savePass(create_password(name,passw))
+                        print('\n')
+
+
+                        print("It has been added successfully")
+                    elif shortCode =="e":
+                        print("Byee.....")
+                        break
+
+                    elif shortCode == 'da':
+                        if display_passwords():
+                            print ("Here is a list")
+
+                            for password in display_passwords():
+                                print(f"{password.userName} { password.password}")
+                            print("\n")
+
+                        else:
+                            print("Sorry")
 
 
