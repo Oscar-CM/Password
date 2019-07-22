@@ -96,4 +96,40 @@ def main():
                         else:
                             print("Sorry")
 
+                             elif shortCode =='an':
+                        print("Enter account Name")
+                        name = input()
+                        print("Choose the code AA -- to enter your own password or BB -- for the system to generate your password")
+                        my_code = input().lower()
+                        if(my_code == "aa"):
+                            print('Enter your password')
+                            passw = input()
+                            savePass(create_password(name,passw))
+                            print("Your details have been enetered successfully")
+                        elif(my_code == "bb"):
+                            passw = randomString(8)
+                            savePass(create_password(name,passw))
+                            print("Your details have been enetered successfully")
+                            
+
+                        
+                    
+
+                    else:
+                            print("Enter the appropriate shortcode")
+                    
+            else:
+                print("The log in details are wrong")
+                print("Try again")
+                print('*'*40)
+          
+
+       
+
+
+if __name__ == '__main__':
+    main()
+
+
+
 
