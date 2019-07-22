@@ -8,7 +8,7 @@ class Password:
 
     def savePassword(self):
         Password.my_list.append(self)
-    
+
     def deletePassword(self):
         Password.my_list.remove(self)
 
@@ -17,14 +17,13 @@ class Password:
         return cls.my_list
 
 
-
 class User:
     user_list = []
 
     def __init__(self, name, Password):
         self.name = name
         self.Password = Password
-    
+
     def saveUser(self):
         User.user_list.append(self)
 
@@ -35,3 +34,4 @@ class User:
             if (user.name == name and user.Password == Password):
                 current_user = user.name
                 return current_user
+

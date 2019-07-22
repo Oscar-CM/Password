@@ -34,7 +34,7 @@ def main():
     print("WELCOME TO THE PASSWORD VAULT")
     print("-"*30)
 
-        while True:
+    while True:
         print("Take sometime to authenticate yourself")
         print("Use either 1,2,3 to navigate. \n 1--Create a pass lock account \n 2--Log in \n 3--Exit")
         code = input("Enter your choice").lower()
@@ -61,7 +61,11 @@ def main():
                 print(" ")
                 print(f'Welcome {name}.\n Please choose an option to continue.')
                 print(' ')
-          while True:
+          
+                
+
+
+                while True:
                     print("Use the following shoryt codes : \n AD--to add new password, \n DA-- to display all the details, \n AN - to add new account details, \n E - Exit")
                     print("")
                     print("Enter the short code")
@@ -95,8 +99,7 @@ def main():
 
                         else:
                             print("Sorry")
-
-                             elif shortCode =='an':
+                    elif shortCode =='an':
                         print("Enter account Name")
                         name = input()
                         print("Choose the code AA -- to enter your own password or BB -- for the system to generate your password")
@@ -129,7 +132,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
 
