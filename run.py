@@ -29,3 +29,9 @@ def randomString(stringLength=10):
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(stringLength))
 
+
+def main():
+    print("WELCOME TO THE PASSWORD VAULT")
+    print("-"*30)
+
+
