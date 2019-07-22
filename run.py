@@ -34,4 +34,33 @@ def main():
     print("WELCOME TO THE PASSWORD VAULT")
     print("-"*30)
 
+        while True:
+        print("Take sometime to authenticate yourself")
+        print("Use either 1,2,3 to navigate. \n 1--Create a pass lock account \n 2--Log in \n 3--Exit")
+        code = input("Enter your choice").lower()
+        if code == "1":
+                print("Enter Username")
+                name = input()
+                print("Enter referred password")
+                password = input()
+
+                saveCredentials(createCred(name,password))
+
+                print(f"{name}, your credentials have been saved successfully")
+        elif code =='3':
+            print("Byee.....")
+            break
+
+        elif code == "2":
+            print("Enter user Name")
+            name = input()
+            print("Enter password")
+            passw = input()
+            user_exists = verify_user(name,passw)
+            if user_exists == name:
+                print(" ")
+                print(f'Welcome {name}.\n Please choose an option to continue.')
+                print(' ')
+          
+
 
