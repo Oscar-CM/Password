@@ -27,3 +27,11 @@ class User:
     
     def saveUser(self):
         User.user_list.append(self)
+
+    @classmethod
+    def check_user(cls,name,Password):
+        current_user = ''
+        for user in User.user_list:
+            if (user.name == name and user.Password == Password):
+                current_user = user.name
+                return current_user
