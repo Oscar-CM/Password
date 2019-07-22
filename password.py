@@ -1,4 +1,6 @@
 class Password:
+    '''password class
+    '''
 
     my_list = []
 
@@ -15,7 +17,9 @@ class Password:
     @classmethod
     def display_passwords(cls):
         return cls.my_list
-
+'''
+the user credentials class
+'''
 
 class User:
     user_list = []
