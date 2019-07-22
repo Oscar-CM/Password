@@ -2,7 +2,14 @@ from password import Password, User
 import random
 import string
 
+'''
+Methods for different futionalities
+'''
+
 def create_password(name, passw):
+    '''
+    save password functionality
+    '''
     new_creation = Password(name,passw)
     return new_creation
 
@@ -10,6 +17,9 @@ def savePass(details):
     details.savePassword()
 
 def display_passwords():
+    '''
+    display all the saved passwords
+    '''
     return Password.display_passwords()
 
 def createCred(name, Password):
@@ -20,9 +30,8 @@ def saveCredentials(details):
     details.saveUser()
 
 def verify_user(first_name,password):
-	
-	checking_user = User.check_user(first_name,password)
-	return checking_user
+    checking_user = User.check_user(first_name,password)
+    return checking_user
 
 def randomString(stringLength=10):
     """Generate a random string of fixed length """
@@ -33,6 +42,10 @@ def randomString(stringLength=10):
 def main():
     print("WELCOME TO THE PASSWORD VAULT")
     print("-"*30)
+
+    '''
+    Authenticate the user
+    '''
 
     while True:
         print("Take sometime to authenticate yourself")
@@ -62,7 +75,9 @@ def main():
                 print(f'Welcome {name}.\n Please choose an option to continue.')
                 print(' ')
           
-                
+                '''
+                Save and display the user details
+                '''
 
 
                 while True:
@@ -104,6 +119,12 @@ def main():
                         name = input()
                         print("Choose the code AA -- to enter your own password or BB -- for the system to generate your password")
                         my_code = input().lower()
+                        '''
+                        Have the option to either ednter their owm password or choose let the program generate
+                        '''
+
+
+                
                         if(my_code == "aa"):
                             print('Enter your password')
                             passw = input()
