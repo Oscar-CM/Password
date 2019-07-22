@@ -33,3 +33,6 @@ class Testing (unittest.TestCase):
     def test_saveUser(self):
         self.new_user.saveUser()
         self.assertEqual(len(User.user_list),1)
+
+if __name__ == '__main__':
+    unittest.main()
